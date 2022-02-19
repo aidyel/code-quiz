@@ -38,7 +38,7 @@ p {
     background-color: darkorchid;
 }
 
-.start-btn button{
+.start-btn button {
     font-size: 25px;
     font-weight: 100;
     color: white;
@@ -53,4 +53,23 @@ p {
     display: grid;
     gap: 10px;
     margin: 20px 0;
+}
+
+.btn {
+    font-size: 25px;
+    font-weight: 100;
+    color: white;
+    background-color: darkblue;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: darkorchid;
+}
+
+.hide {
+    visibility: hidden;
+    display: none;
 }

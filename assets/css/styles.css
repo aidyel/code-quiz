@@ -21,6 +21,7 @@ h1 {
     text-align: center;
     
 }
+
 p {
    text-align: center;
    width: 60%;
@@ -29,9 +30,12 @@ p {
 }
 
 .start-btn {
-    position: absolute;
+    position: fixed;
     top: 30%;
     left: 45%;
+}
+.start-btn button:hover {
+    background-color: darkorchid;
 }
 
 .start-btn button{
@@ -45,3 +49,8 @@ p {
     border-radius: 5px;
 }
 
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}

@@ -28,7 +28,11 @@ p {
    margin: 0 auto;
 
 }
-
+.title {
+    text-align: center;
+    font-size: medium;
+    font-style: normal;
+}
 .start-btn {
     position: fixed;
     top: 30%;

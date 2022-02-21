@@ -1,65 +1,71 @@
 
 var startButton = document.getElementById('start-btn')
+var mainScreen = document.getElementById('start-screen')
+var questionContainerEl = document.getElementById('question-container')
+var timerEl = document.getElementById('time')
+var questionEl = document.getElementById('question')
+var answerEl = document.querySelector(".btn")
+var answerButtonEl = document.getElementById('answer-btn')
+
+var shuffledQuestions, currentQuestionsIndex
+
+function startQuiz() {
+    console.log('started')
+    mainScreen.classList.add('hide')
+   
+    shuffledQuestions = allQuestion.sort(() => Math.random() - .5)
+    currentQuestionsIndex = 1
+    questionContainerEl.classList.remove('hide')
+    countdown()
+    setNextQuestion()
+    showQuestion()
+
+}
+
 startButton.addEventListener('click', startQuiz)
 
 
-function startQuiz() {  
-  console.log('started')
-}
-
-
-
-var timerEl = document.getElementById('time')
 // Build timer countdown function
-function countdown(){
+function countdown() {
     var timeLeft = 75;
-    
+
     var timeInterval = setInterval(function () {
-        if (timeLeft > 1){
-            timerEl.textContent = timeLeft + 'seconds remaining';
+        if (timeLeft > 1) {
+            timerEl.textContent = timeLeft;
             timeLeft--;
-        }else if (timeLeft === 1) {
-            timer.textContent = timeLeft + 'second remaining';
+        } else if (timeLeft === 1) {
+            timerEl.textContent = timeLeft;
             timeLeft--;
-        }else {
+        } else {
             timerEl.textContent = '';
             clearInterval(timeInterval);
         }
-        
+
     }, 1000)
 }
-// questions
+// questions 
 
+function selectAnswer() {
 
+}
 
+function showQuestion(allQuestion) {
+    console.log(allQuestion)
+    questionEl.innerText = allQuestion.question
+    document.getElementById("answer-btn").innerHTML = " ";
+    for (var i = 0; i < allQuestion.answers.length; i++) {
+        var btnName = document.createElement("button");
+        btnName.className = "choice";
+        btnName.innerText = allQuestion.answers[i];
+        btnName.className = "button-name-style choice";
+        document.getElementById("question-container").appendChild(btnName)
 
-// var question =[
-//     {
-//         titile: "Commonly use data types Do Not include:",
-//         choices: ["Strings, booleans, alerts, numbers"],
-//         solution: "2"
-//     },
+    };
+   
 
-//     {
-//         titile: "Commonly use data types Do Not include:",
-//         choices: ["Strings", "booleans", "alerts", "numbers"],
-//         solution: "2"
-//     },
+}
 
-//     {
-//         titile: "The condition in an if/else statement is enclosed with______. ",
-//         choices: ["quotes", "curly brackets", "parenthesis", "square brackets"],
-//         solution: "2"
-//     }, 
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionsIndex])
+}
 
-//     {
-//         titile: "Arrays in JavaScript can be used to store______.",
-//         choices: ["numbers and srtings", "other arrays", "booleans", "all of the above"],
-//         solution: "3"
-//     }, 
-
-//     {
-//         titile: "String values must be enclosed within_______ when being assigned to variables",
-//         choices: ["comas", "curly brackets", "quotes", "parenthesis"],
-//         solution: "2"
-//     },]

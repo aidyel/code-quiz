@@ -10,32 +10,23 @@
 </head>
 
 <body>
-    <div class="scores"><a href="highscores.html">View highscores</a></div>
+           <!-- Link to highscores -->
+    <a href="HighScores.html">View Highscores</a>
+    <!-- This is a wrapper -->
+    <div id="wrapper">
+        <div id="currentTime"></div>
+        <div id="questionsDiv">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers
+                will penalize your score/time by 15 seconds!</p>
+            <ul id="choicesUl"></ul>
+            <button id="startTime">Start Quiz</button>
+        </div>
 
-    <div class="timer">Time: <span id="time"></span></div>
-    
-    <section class="wrapper">
-        <div id="start-screen" class="start">
-            <h1>Coding Quiz</h1>
-            <p>Try to answer the following code-related questions within the time limit. keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            <div class="controls">
-                <button id="start-btn" class="start-btn btn">Start Quiz</button>
-            </div>
-            </div>
-            
-            <div id="question-container" class="hide">
-            <div id="question" class="title">Questions</div>
-            <div id="answer-btn" class="btn-grid">
-                <!-- <button class="btn">answer 1</button>
-                <button class="btn">answer 2</button>
-                <button class="btn">answer 3</button>
-                <button class="btn">answer 4</button>
-                <button class="btn">answer 5</button> -->
-            </div>
-            </div>
+    </div>
+
             <script src="./assets/js/script.js"></script>
-            <script src="./assets/js/questions.js"></script>
-    </section>
 
 </body>
 </html>

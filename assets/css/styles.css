@@ -4,6 +4,7 @@
     top: 20%;
     width: 500px;
     height: 500px;
+   
   
 }
 #startTime {
@@ -13,13 +14,16 @@
     font-size: 20px;
     color: white;
 }
+#startTime:hover {
+    background-color: darkorchid;
+}
 
  #questionDive {
      margin: 20px;
  }
 
  #currentTime {
-     float: right;
+   float: right;
  }
 
  #go-back {
@@ -36,6 +40,10 @@
     
  }
 
+ #go-back:hover {
+    background-color: darkorchid;
+ }
+
  #clear {
      background-color: darkblue;
      position: relative;
@@ -46,6 +54,11 @@
      right: 5%;
      text-align: center;
  }
+
+ #clear:hover {
+     background-color: darkorchid;
+ }
+
  #Submit {
     background-color: darkblue;
     margin-left: 33%;
@@ -53,14 +66,14 @@
     font-size: 20px;
     color: white;
 }
+#Submit:hover {
+   background-color: darkorchid;
+}
 
  button{
      border-radius: 20px;
  }
 
- button:hover {
-     background-color: darkorchid;
- }
 
  textarea {
      width: 90%;
@@ -88,6 +101,10 @@
      font-size: 18px;
      color: white;
      border-radius: 20px;
+ }
+
+ li:hover {
+     background-color: darkorchid;
  }
  #createDiv {
      margin-top: 20px;

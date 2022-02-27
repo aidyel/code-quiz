@@ -96,12 +96,12 @@ function compare(event) {
         // Correct condition 
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Correct!" 
             // Correct condition 
         } else {
             // Will deduct -5 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
-            createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Wrong!"
         }
 
     }

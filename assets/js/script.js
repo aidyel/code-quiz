@@ -32,17 +32,17 @@ var questionIndex = 0;
 
 // Start working code 
 // Declared variables
-var currentTime = document.querySelector("#currentTime");
-var timer = document.querySelector("#startTime");
-var questionsDiv = document.querySelector("#questionsDiv");
-var wrapper = document.querySelector("#wrapper");
+var currentTime = document.getElementById("currentTime");
+var timer = document.getElementById("startTime");
+var questionsDiv = document.getElementById("questionsDiv");
+var wrapper = document.getElementById("wrapper");
 
 // Seconds left is 15 seconds per question:
 var secondsLeft = 75;
 // Holds interval time
 var holdInterval = 0;
 // Holds penalty time
-var penalty = 10;
+var penalty = 15;
 // Creates new element
 var ulCreate = document.createElement("ul");
 
